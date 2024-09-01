@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SEFLIX/static/css/main.8745d87b.css",
+    "main.js": "/SEFLIX/static/js/main.316f727c.js",
+    "index.html": "/SEFLIX/index.html",
+    "main.8745d87b.css.map": "/SEFLIX/static/css/main.8745d87b.css.map",
+    "main.316f727c.js.map": "/SEFLIX/static/js/main.316f727c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8745d87b.css",
+    "static/js/main.316f727c.js"
+  ]
+}
