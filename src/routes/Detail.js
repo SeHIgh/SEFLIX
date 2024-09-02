@@ -5,16 +5,19 @@ function Detail() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [movie_detail, setMvDetail] = useState();
-  const getMovie = async () => {
-    const json = await (
-      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-    ).json();
-    setMvDetail(json.data.movie);
-    setLoading(false);
-  };
+
   useEffect(() => {
+    const getMovie = async () => {
+      const json = await (
+        await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+      ).json();
+      setMvDetail(json.data.movie);
+      setLoading(false);
+    };
+
     getMovie();
-  }, []);
+  }, [id]); // id가 변경될 때마다 useEffect가 실행됨
+
   return (
     <div>
       {loading ? (
